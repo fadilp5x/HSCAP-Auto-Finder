@@ -41,7 +41,7 @@ The extension isn't just a background script; it features a fully styled Command
 
 *(Add your Command Center screenshot here)*
 <div align="center">
-  <img src="path/to/command-center-image.png" alt="HSCAP Command Center" width="600"/>
+  <img src="https://i.ibb.co/SDqHK2KR/image.png" alt="HSCAP Command Center" width="600"/>
 </div>
 
 ### 2. Deep DOM Traversal
@@ -53,7 +53,7 @@ The extension accurately mimics human navigation:
 
 *(Add your simple UI screenshot here)*
 <div align="center">
-  <img src="path/to/finder-v2-image.png" alt="HSCAP Finder V2 UI" width="400"/>
+  <img src="https://i.ibb.co/yBZPGChm/image.png" alt="HSCAP Finder V2 UI" width="400"/>
 </div>
 
 ### 3. Match Alert System
