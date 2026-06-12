@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h3>HSCAP Command Center</h3>
+
+    <div class="dashboard">
+        <div class="stat-box">
+            <div class="stat-title">Schools Scanned</div>
+            <div class="stat-value" id="schoolsScanned">0 / 0</div>
+        </div>
+        <div class="stat-box">
+            <div class="stat-title">Matches Found</div>
+            <div class="stat-value" id="matchesFound">0</div>
+        </div>
+        <div class="stat-box">
+            <div class="stat-title">Status</div>
+            <div class="stat-value" id="status">Idle</div>
+        </div>
+        <div class="stat-box">
+            <div class="stat-title">Est. Time Left</div>
+            <div class="stat-value" id="eta">--:--</div>
+        </div>
+    </div>
+
+    <div class="controls">
+        <button id="startBtn">Start</button>
+        <button id="pauseResumeBtn">Pause</button>
+    </div>
+
+    <div class="results-container">
+        <table id="resultsTable">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>School</th>
+                </tr>
+            </thead>
+            <tbody id="resultsBody">
+                </tbody>
+        </table>
+    </div>
+
+    <script src="popup.js"></script>
+</body>
+</html>

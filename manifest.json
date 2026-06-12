@@ -1,0 +1,27 @@
+{
+  "manifest_version": 3,
+  "name": "HSCAP Command Center V6",
+  "version": "6.0",
+  "description": "An intelligent dashboard to find and manage student data from HSCAP.",
+  "permissions": [
+    "storage",
+    "tabs",
+    "scripting",
+    "downloads"
+  ],
+  "host_permissions": [
+    "https://hscap.kerala.gov.in/student_status.php"
+  ],
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "web_accessible_resources": [
+    {
+      "resources": ["match.mp3", "complete.mp3"],
+      "matches": ["<all_urls>"]
+    }
+  ]
+}

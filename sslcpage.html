@@ -1,0 +1,1473 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "//www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="//www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!-- <link rel="stylesheet" type="text/css" href="../images/style.css"> -->
+<title>School Status</title>
+
+</head>
+
+<script language="javascript" type="text/javascript">
+function frmsuballot()
+	{
+		 if(document.frm.cmbschool.value == 0)
+		{
+			alert("Please Select School");
+			document.frm.txtgroup.focus();
+			return false;
+
+		}
+		else if(document.frm.txtgroup.value == 0)
+		{
+			alert(" Please Select Course Combination");
+			document.frm.txtgroup.focus();
+			return false;
+		}
+	}
+
+</script>
+<body>
+<form name="frm" method="post">
+<br />
+<table align="center">
+<tr>
+<td colspan="3" align="center" ><h2>School Wise Admitted Students List</h2></td>
+<tr>
+<tr>
+<td colspan="3" align="center" ></td>
+<tr>
+<td  bgcolor="#993131" width="150px" align="center" ><font color="#FFFFFF"><b>Select District</b></font></td>
+<td >
+<select name="cmbdist" style="width:200px" tabindex="3" onChange="frm.submit();">
+      <option value="0">[SELECT]</option>
+      <option value="1" >THIRUVANANTHAPURAM</option>
+      <option value="2" >KOLLAM</option>
+      <option value="3" >PATHANAMTHITTA</option>
+      <option value="4" >ALAPPUZHA</option>
+      <option value="5" >KOTTAYAM</option>
+      <option value="6" >IDUKKI</option>
+      <option value="7" >ERNAKULAM</option>
+      <option value="8" >THRISSUR</option>
+      <option value="9" >PALAKKAD</option>
+      <option value="10" selected>KOZHIKKODE</option>
+      <option value="11" >MALAPPURAM</option>
+      <option value="12" >WAYANAD</option>
+      <option value="13" >KANNUR</option>
+      <option value="14" >KASARGODE</option>
+      <option value="15" >OTHERS</option>
+    </select>
+</td>
+<td width="100px" align="center"><a href="index.php">Back</a></td> 
+</tr>
+</table>
+<br />
+<table width="80%" height="117"  border="0" align="center" bgcolor="#f9faf5">
+  <tr>
+    <td height="16" colspan="2" align="center" bgcolor="#000000" ><b><span class="style4"><span class="style4"><font color="#FFFFFF">ADMITTED STUDENTS LIST</font></span></span></b></td>
+    </tr>
+
+  <tr>
+
+
+      <td width="129" class="style3 style5">Select School </td>
+      <td width="499">
+	  <select name="cmbschool" class="style1 style5" id="cboschool1" onChange="this.form.submit();" >
+	  <option value="0" >-------Select School Code--------</option>
+	  	  <option value="10001" selected>10001   GOVT. GANAPATH GIRLS HSS,CHALAPPURAM,KOZHIKKODE</option>
+	  	  <option value="10002" >10002   GOVT HSS, EAST HILL, KOZHIKKODE</option>
+	  	  <option value="10003" >10003   GOVT HSS, KODUVALLY, KOZHIKKODE</option>
+	  	  <option value="10004" >10004   GOVT HSS,KOKKALLUR,KOZHIKKODE</option>
+	  	  <option value="10005" >10005   GOVT GIRLS HSS, KOYILANDY, KOZHIKKODE</option>
+	  	  <option value="10006" >10006   GOVT MODEL HSS,KOZHIKKODE,KOZHIKKODE</option>
+	  	  <option value="10007" >10007   GOVT HSS, KUTTIADY, KOZHIKKODE</option>
+	  	  <option value="10008" >10008   GOVT VHSS, MADAPPALLY, KOZHIKKODE</option>
+	  	  <option value="10009" >10009   GOVT HSS, MAVOOR, KOZHIKKODE, KANNIPARAMBA P.O.</option>
+	  	  <option value="10010" >10010   GOVT VHSS,MEPPAYUR,KOZHIKKODE</option>
+	  	  <option value="10011" >10011   GOVT HSS, KAYANNA, MATTAMODE P.O. , KOZHIKKODE</option>
+	  	  <option value="10012" >10012   GOVT JNM HSS,PUTHUPPANAM,KOZHIKKODE</option>
+	  	  <option value="10013" >10013   GOVT SANSKRIT HSS, MEPPAYIL, VADAKARA</option>
+	  	  <option value="10014" >10014   GOVT HSS,VALAYAM,KOZHIKKODE</option>
+	  	  <option value="10015" >10015   GOVT  HSS, VADAKARA, PUTHUR PO, NUT STREET, KOZHIKKODE</option>
+	  	  <option value="10016" >10016   GOVT HSS, AZHIYOOR, KOZHIKKODE</option>
+	  	  <option value="10017" >10017   GOVT. MOPLA HSS,KOYILANDY,KOZHIKKODE</option>
+	  	  <option value="10018" >10018   GOVT HSS,POONUR,KOZHIKKODE</option>
+	  	  <option value="10019" >10019   GOVT HSS. MEDICAL COLLEGE CAMPUS, CHEVAYOOR.P.O, CLT 17, KOZHIKODE</option>
+	  	  <option value="10020" >10020   GOVT HSS,BEYPORE,KOZHIKKODE</option>
+	  	  <option value="10021" >10021   REC GOVT HSS,CHATHAMANGALAM,KOZHIKKODE</option>
+	  	  <option value="10022" >10022   GOVT HSS,KUTTIKKATTUR,KOZHIKKODE</option>
+	  	  <option value="10023" >10023   GOVT VHSS,PAYYOLI,KOZHIKKODE</option>
+	  	  <option value="10024" >10024   GOVT HSS,KALLACHI,KOZHIKKODE</option>
+	  	  <option value="10025" >10025   GOVT GIRLS HSS, NADAKKAVU, KOZHIKKODE</option>
+	  	  <option value="10026" >10026   GOVT GHSS,BALUSSERY,KOZHIKKODE</option>
+	  	  <option value="10027" >10027   GOVT HSS,KOLATHUR,KOZHIKKODE</option>
+	  	  <option value="10028" >10028   GOVT HSS, CHORODE, KOZHIKKODE, KURIKKILAD P.O.</option>
+	  	  <option value="10029" >10029   KKM GOVT HSS,  ORKATTERI, ERAMALA PO, KOZHIKKODE</option>
+	  	  <option value="10030" >10030   GOVT HSS, VELLIYODE, KODIYURA , KOZHIKKODE</option>
+	  	  <option value="10031" >10031   PAVANDOOR HSS, PAVANDOOR,KOZHIKKODE</option>
+	  	  <option value="10032" >10032   PERAMBRA HSS,PERAMBRA,KOZHIKKODE</option>
+	  	  <option value="10033" >10033   TIM GIRLS HSS, NADAPURAM, KOZHIKKODE</option>
+	  	  <option value="10034" >10034   RAC HSS, KATAMERI, KOZHIKKODE</option>
+	  	  <option value="10035" >10035   NADUVANNUR HSS,VAKAYAD,KOZHIKKODE</option>
+	  	  <option value="10036" >10036   NANMINDA HSS,NANMINDA,KOZHIKKODE</option>
+	  	  <option value="10037" >10037   RAHMANIA HSS FOR HANDICAPPED, MEDICAL COLLEGE, CALICUT</option>
+	  	  <option value="10038" >10038   MARKAZ HSS,KARANTHOOR,KOZHIKKODE</option>
+	  	  <option value="10039" >10039   ST SEBASTIAN S HSS,KOODARANJI,KOZHIKKODE</option>
+	  	  <option value="10040" >10040   BEM GIRLS HSS,BANK ROAD, KOZHIKKODE</option>
+	  	  <option value="10041" >10041   NOCHAD HSS,NOCHAD,KOZHIKKODE</option>
+	  	  <option value="10042" >10042   ST.JOSEPH S BOYS HSS,CALICUT</option>
+	  	  <option value="10043" >10043   ZAMORIN S HSS,CHALAPPURAM, KOZHIKKODE</option>
+	  	  <option value="10044" >10044   CHENNAMANGALLUR HSS,MUKKAM,KOZHIKKODE</option>
+	  	  <option value="10045" >10045   FAROOK HSS, FAROOK COLLEGE P O, KOZHIKODE</option>
+	  	  <option value="10046" >10046   ST JOSEPH S A I GHSS,KOZHIKKODE</option>
+	  	  <option value="10047" >10047   MALABAR X IAN COLLEGE HSS,KOZHIKKODE</option>
+	  	  <option value="10048" >10048   SAVIO HSS,DEVAGIRY,KOZHIKKODE</option>
+	  	  <option value="10049" >10049   RAMAKRISHANA MISSION  HSS KOZHIKODE                                                                                            </option>
+	  	  <option value="10050" >10050   JDT ISLAM HSS,KOZHIKKODE</option>
+	  	  <option value="10051" >10051   CALICUT GIRLS HSS, KOZHIKKODE</option>
+	  	  <option value="10052" >10052   MM VHSS,   PARAPPIL,  KOZHIKODE</option>
+	  	  <option value="10053" >10053   MIM  HSS,PERODE,KOZHIKKODE</option>
+	  	  <option value="10054" >10054   MEMUNDA HSS,VILIAPPALLI,KOZHIKKODE</option>
+	  	  <option value="10055" >10055   IRINGANNUR HSS,IRINGANNUR,KOZHIKKODE</option>
+	  	  <option value="10056" >10056   ST JOSEPH S HSS, KODANCHERY, KOZHIKKODE</option>
+	  	  <option value="10057" >10057   SACRED HEART HSS, THIRUVAMPADI, KOZHIKKODE</option>
+	  	  <option value="10058" >10058   UMBICHIY HAJI HSS,CHALIYAM,KOZHIKKODE</option>
+	  	  <option value="10059" >10059   CALICUT HSS FOR THE HANDICAPPED, KOLATHARA.P.O, KOZHIKKODE, 673655</option>
+	  	  <option value="10060" >10060   PALORA HSS, ULLIYERI, KOZHIKODE</option>
+	  	  <option value="10061" >10061   THIRUVANGOOR HSS,KOILANDY,KOZHIKKODE</option>
+	  	  <option value="10062" >10062   ST GEORGE HSS,KULATHUVAYAL,   KAYANNA      KOZHIKKODE</option>
+	  	  <option value="10063" >10063   KUNNAMANGALAM HSS, KUNNAMANGALAM, KOZHIKODE</option>
+	  	  <option value="10064" >10064   HIMAYATHUL ISLAM HSS,KOZHIKKODE</option>
+	  	  <option value="10065" >10065   AKKR HSS FOR GIRLS,CHELANNUR,KOZHIKKODE</option>
+	  	  <option value="10066" >10066   PROVIDENCE HSS FOR GIRLS , NADAKKAVU,KOZHIKKODE-2</option>
+	  	  <option value="10067" >10067   MOHAMMED ALI JOHAR HSS,ELETTIL,KOZHIKKODE</option>
+	  	  <option value="10068" >10068   NATIONAL HSS, VATTOLI ,KOZHIKKODE</option>
+	  	  <option value="10069" >10069   SALAFI HSS, MEPPAYUR, 673523</option>
+	  	  <option value="10070" >10070   PRESENTATION HSS, CHEVAYUR, 673017</option>
+	  	  <option value="10071" >10071   SREE NARAYANA HSS, VADAKARA, 673101</option>
+	  	  <option value="10072" >10072   VENERINI ENGLISH MEDIUM HSS, FAROOK, 673632</option>
+	  	  <option value="10073" >10073   CALICUT ISLAMIC HSS, MATHARA, 673014</option>
+	  	  <option value="10074" >10074   CHINMAYA VIDYALAYA HSS,  NELLIKODE, 673016</option>
+	  	  <option value="10075" >10075   KMO HSS, KODUVALLY, 673572</option>
+	  	  <option value="10076" >10076   KUTTAMBOORE HSS, PUNNASSEERY, NARIKKUNNU, 673585</option>
+	  	  <option value="10078" >10078   MUM HSS, VADAKARA,  673103</option>
+	  	  <option value="10079" >10079   ILAHIYA HSS, KAPPADU, 673318</option>
+	  	  <option value="10081" >10081   SILVER HILLS HSS, KOZHIKODE, 673012</option>
+	  	  <option value="10082" >10082   SHRI GUJARATHI VIDYALAYA HSS, KOZIKODE, 673032</option>
+	  	  <option value="10083" >10083   CRESENT HSS, VANIMEL, KODIYURA, 673515</option>
+	  	  <option value="10084" >10084   NSS  HSS, MEENCHANTHA, 673018</option>
+	  	  <option value="10085" >10085   JDT ISLAM HSS, MARYKUNNU, 673012</option>
+	  	  <option value="10086" >10086   ISLAMIC ACADEMY ENGLISH HSS, KOTTAKKAL, IRINGAL, 673521</option>
+	  	  <option value="10088" >10088   AUXILIAM NAVA JYOTHI HSS , KUNNAMANGALAM, 673571</option>
+	  	  <option value="10090" >10090   MKHMMO HSS, MANASSERY, MUKKAM</option>
+	  	  <option value="10091" >10091   SIA COLLEGE HSS, UMMATHUR, PARAKKADAVU, 673509</option>
+	  	  <option value="10093" >10093   GOVT. VHSS, KOYILANDY, KOZHIKODE</option>
+	  	  <option value="10094" >10094   GOVT. HSS, PUTHUPPADY, KOZHIKODE</option>
+	  	  <option value="10095" >10095   GOVT. HSS, THAMARASSERY, KOZHIKODE</option>
+	  	  <option value="10096" >10096   GOVT. GIRLS HSS, MADAPPALLY, KOZHIKODE</option>
+	  	  <option value="10097" >10097   GOVT. HSS, AZCHAVATTOM, KOZHIKODE</option>
+	  	  <option value="10098" >10098   GOVT. VHSS, KUTTICHIRA, KOZHIKODE</option>
+	  	  <option value="10099" >10099   GOVT. HSS, NARIKUNI, KOZHIKODE</option>
+	  	  <option value="10100" >10100   GOVT. HSS, PAYAMBRA, KUNNAMANGALAM, KOZHIKODE</option>
+	  	  <option value="10101" >10101   GOVT. HSS, KARUVAMPOYIL, KOZHIKODE</option>
+	  	  <option value="10102" >10102   GOVT. HSS, KAKKODY, MAKKODA P.O., KOZHIKODE</option>
+	  	  <option value="10103" >10103   GOVT. HSS, PANNUR, KOZHIKODE</option>
+	  	  <option value="10104" >10104   GOVT. HSS, SIVAPURAM, KOZHIKODE</option>
+	  	  <option value="10105" >10105   GOVT. ACHUTHAN GIRLS HSS, CALICUT</option>
+	  	  <option value="10106" >10106   GOVT. GANAPAT  HSS, KALLAI, KOZHIKODE</option>
+	  	  <option value="10107" >10107   GOVT. HSS, NGO QUARTERS, MARIKKUNNU, KOZHIKODE</option>
+	  	  <option value="10108" >10108   GOVT. VHSS, ATHOLI, KOZHIKODE</option>
+	  	  <option value="10109" >10109   GOVT. HSS, NEELESWARAM , KOZHIKODE</option>
+	  	  <option value="10110" >10110   GOVT. HSS, PERINGOLAM, KUNNAMANGALAM, KOZHIKODE</option>
+	  	  <option value="10111" >10111   GOVT. FISHERIES HSS, PUTHIYAPPA, PUTHIYANGADI</option>
+	  	  <option value="10112" >10112   GOVT. GANAPAT HSS, FEROKE, KOZHIKODE</option>
+	  	  <option value="10113" >10113   GOVT. HSS, AVALA, KUTTOTH, MEPPAYUR</option>
+	  	  <option value="10114" >10114   MANIYOOR PANCHAYATH HSS, MANIYOOR, PALAYATNADA , KOZHIKODE</option>
+	  	  <option value="10115" >10115   GOVT. HSS, NEDUVANNUR, KOZHIKODE</option>
+	  	  <option value="10116" >10116   GOVT. HSS, AVITTANALLUR, KOZHIKODE</option>
+	  	  <option value="10117" >10117   GOVT. HSS, CHERUVANNUR, KOLATHARA P.O., KOZHIKODE</option>
+	  	  <option value="10119" >10119   SN TRUST HSS, CHELANNUR, KANNANKARA P.O., KOZHIKODE</option>
+	  	  <option value="10123" >10123   MKHMMO HSS FOR GIRLS, MOKKOM, KOZHIKODE, 673602</option>
+	  	  <option value="10125" >10125   MGM HSS, ENGAPUZHA, PUDUPPADI, KOZHIKODE, 673586</option>
+	  	  <option value="10126" >10126   TECHNICAL HSS, THIRUTHIYAD, KOZHIKODE, 673004</option>
+	  	  <option value="10127" >10127   N I R HSS, Parappanpoyil, Kozhikkode</option>
+	  	  <option value="10129" >10129   MARKAZ ENGLISH MEDIUM HSS, KARANTHUR, KOZHIKODE, 673571</option>
+	  	  <option value="10130" >10130   IPC HSS, PAYYOLI, KOZHIKODE, 673522</option>
+	  	  <option value="10131" >10131   D.H.E.M. HSS, NADAPURAM,, KOZHIKODE, 673504</option>
+	  	  <option value="10132" >10132   JDT ISLAM IQRAA HSS, VELLIMADUKUNNU, KOZHIKODE., 673012</option>
+	  	  <option value="10134" >10134   GHSS NAYARKUZHI, (via) NITC, NAYARKUZHI, KOZHIKODE,</option>
+	  	  <option value="10135" >10135   GHSS PARAMBIL, PARAMBIL PO, KOZHIKODE,</option>
+	  	  <option value="10136" >10136   GHSS, IRINGALLUR, GURUVAYOORAPPAN COLLEGE PO, KOZHIKODE,</option>
+	  	  <option value="10137" >10137   GHSS KUNDUPARAMBU, EDAKKAD, KOZHIKODE,</option>
+	  	  <option value="10138" >10138   GHSS KARAPPARAMBA, KARAPPARAMBA, KOZHIKODE, </option>
+	  	  <option value="10139" >10139   S K POTTEKKATT MEMORIAL GOVT. VOCATIONAL & HIGHER SECONDARY SCHOOL,PARAYANCHERY ,PUTHIYARA P O, KOZHIKODE</option>
+	  	  <option value="10140" >10140   GOVT. GHSS, PARAYANCHERY, PUTHIYARA, KOZHIKKODE</option>
+	  	  <option value="10150" >10150   CMM Higher Secondary School,Thalakkulathur</option>
+	  	  <option value="10151" >10151   Holy Family Higher Secondary School, Kattippara</option>
+	  	  <option value="10152" >10152   CKG Memorial Higher Secondary School,Chingapuram</option>
+	  	  <option value="10153" >10153   Kunhali Marakkar  Higher Secondary School,Iringal, Kottakkal</option>
+	  	  <option value="10154" >10154   Bafakhy Thangal Memmorial Higher Secondary School, Thurayur,Payyoli, Angadi. P. O</option>
+	  	  <option value="10155" >10155   Poilkav Higher Secondary School, Edakkulam</option>
+	  	  <option value="10156" >10156   Velom Higher Secondary School, Cherapuram P O</option>
+	  	  <option value="10157" >10157   A J John Memmorial Higher Secondary School</option>
+	  	  <option value="10158" >10158   KPES Higher Secondary School, Kayakkodi</option>
+	  	  <option value="10159" >10159   St. Mary's Higher Secondary School, Maruthomkara. P. O, Maruthomkara,</option>
+	  	  <option value="10160" >10160   KPM SM Higher Secondary School, Arikkulam</option>
+	  	  <option value="10161" >10161   VMHM Higher Secondary School, Anayamkunnu, Mukkam, Kozhikode</option>
+	  	  <option value="10162" >10162   Vadakkumpad Higher Secondary School, Paleri. P. O, Paleri Town</option>
+	  	  <option value="10163" >10163   St.Mary's Higher Secondary School, Kallanode</option>
+	  	  <option value="10164" >10164   Chakkalakkal Higher Secondary School, Madavoor, Padanilam</option>
+	  	  <option value="10165" >10165   St. Mary's Higher Secondary School, Koodathai</option>
+	  	  <option value="10166" >10166   AM Higher Secondary School, Poovambayi, Kinalur. P. O, - 673621</option>
+	  	  <option value="10167" >10167   C.M Higher Secondary School, Mannur North</option>
+	  	  <option value="10168" >10168   Fathimabi Memorial Higher Secondary School, Koombara, Kozhikode</option>
+	  	  <option value="10169" >10169   Markaz Girls Higher Secondary School, Karanthur, Kozhikode</option>
+	  	  <option value="10170" >10170   Sevamandir Post Basic Higher Secondary School, Ramanattukara</option>
+	  	  <option value="10171" >10171   PVS Higher Secondary School, Eranhikkal</option>
+	  	  <option value="10172" >10172   St. Vincent Colony Girls Higher Secondary School,  Calicut - 673 006</option>
+	  	  <option value="10173" >10173   ST. Michael's Girls' Higher Secondary School, Westhill, Kozhikode - 5</option>
+	  	  <option value="10174" >10174   St. Joseph's Higher Secondary School, Pullurampara</option>
+	  	  <option value="10175" >10175   S.I Higher Secondary School, Ummathur</option>
+	  	  <option value="10176" >10176   RNM Higher Secondary School, Narippatta</option>
+	  	  <option value="10177" >10177   KR Higher Secondary School, Purameri</option>
+	  	  <option value="10178" >10178   Sree Vasudeva Ashramam Govt HSS, Naduvathoor, Koilandi</option>
+	  	  <option value="10179" >10179   EMS Govt. HSS Perumanna</option>
+	  	  <option value="10180" >10180   GHSS Cheruvadi</option>
+	  	  <option value="10181" >10181   Koothali VHSS </option>
+	  	  <option value="10182" >10182   Rahmaniya HSS Ayancheri</option>
+	  	  <option value="10183" >10183   Holy Family HSS  Padathukadavu</option>
+	  	  <option value="10184" >10184   Kuttamboor HSS</option>
+	  	  <option value="10185" >10185   PTM HSS Kodiyathur</option>
+	  	  <option value="10186" >10186   St.George HSS Velamkode</option>
+	  	  <option value="10187" >10187   St.Thomas HSS Koorachundu</option>
+	  	  <option value="10188" >10188   MKHMMOVHSS for Girls Mukkam</option>
+	  	  <option value="10189" >10189   Mukkam HSS Mukkam</option>
+	  	  <option value="10190" >10190   Pantheerankave HSS</option>
+	  	  <option value="10191" >10191   Holy Family HSS Venapara</option>
+	  	  <option value="10192" >10192   MGM HSS  Engapuzha</option>
+	  	  <option value="10193" >10193   MUMVHSS Vadakara</option>
+	  	  <option value="10194" >10194   Crescent HSS Vanimel</option>
+	  	  <option value="10195" >10195   EMJAY VHSS, Villiapalli,Vatakara,Kozhikkode 673542</option>
+	  	  <option value="10196" >10196   ST.THOMAS HIGHER SECONDARY  SCHOOL THOTTUMUKKAM, KOZHIKODE - 673639</option>
+	  	  <option value="10197" >10197   BEM HSS, Vadakara</option>
+	  	  <option value="10198" >10198   SANTHINIKETHAN HSS, THIRUVALLUR, KOZHIKKODE</option>
+	  	  <option value="10301" >10301   Hi-Tech Higher Secondary School, Vattoli, Kunnummal, Kozhikkode</option>
+	  	  <option value="10302" >10302   KARUNA SPEECH & HEARING HSS, ERANHIPALAM P.O, KOZHIKODE-6</option>
+	  	  </select></td>
+    </tr>
+    <tr>
+      <td class="style3 style5">Select Course </td>
+      <td><select name="txtgroup" class="style1 style5">
+          <option value="0">Select Course Combination</option>
+                    <option value="1" selected>
+          1: Physics, Chemistry, Biology,Mathematics          </option>
+                    <option value="10" >
+          10: History, Economics, Political Science, Geography          </option>
+                    <option value="34" >
+          34: Sociology, Journalism, Communicative English,Computer Applications          </option>
+                    <option value="39" >
+          39: Business Studies, Accountancy, Economics,Computer Applications          </option>
+                </select></td>
+    </tr>
+    <tr>
+      <td colspan="2" class="style1">
+      <div align="center">
+        <input name="njreset" type="submit" id="njreset" value="Submit" onclick="frmsuballot()"/>
+      </div>      </td>
+    </tr>
+  </table>
+  
+
+  <table width="90%"  height="39" border="3" align="center" cellpadding="0" cellspacing="1">
+    <tr bgcolor="#000000" height="18">
+  <td colspan="11" align="center"><font color="#FFFFFF"><B>SWS & SPORTS QUOTA ADMISSION</B></font> 
+  <!--<td colspan="10" align="center"><font color="#FFFFFF"><B>MERIT QUOTA ADMISSION</B></font>--> 
+ </td>
+ </tr>
+    <tr bgcolor="#5F6D46" height="18">
+      <td  height="14" align="center" nowrap="nowrap" bgcolor="#D41128" style="color:#FFFFFF "><div align="right">
+          <p class="style3"><strong>SL</strong><strong>NO</strong></p>
+      </div></td>
+      <td align="center" nowrap="nowrap" bgcolor="#D41128" style="color:#FFFFFF "><p class="style3"><strong>Application</strong><strong>No</strong></p>
+      </td>
+
+      <td align="center" nowrap="nowrap" bgcolor="#D41128" style="color:#FFFFFF "><p class="style3"><strong>Reg. No:</strong></p></td>
+	  <td align="center" nowrap="nowrap" bgcolor="#D41128" style="color:#FFFFFF "><p class="style3"><strong>Name</strong></p></td>
+      <td align="center" nowrap="nowrap" bgcolor="#D41128" style="color:#FFFFFF "><p><span class="style3"><strong>Gender</strong></span></p></td>
+<!--	  <td align="center" nowrap="nowrap" bgcolor="#D41128" style="color:#FFFFFF "><p><span class="style3"><strong>Caste</strong></span></p></td>
+	  <td align="center" nowrap="nowrap" bgcolor="#D41128" style="color:#FFFFFF "><p><span class="style3"><strong>Category</strong></span></p></td>-->
+	  <td align="center" nowrap="nowrap" bgcolor="#D41128" style="color:#FFFFFF "><p><span class="style3"><strong>Second Lang</strong></span></p></td>
+	  <td align="center" nowrap="nowrap" bgcolor="#D41128" style="color:#FFFFFF "><span class="style3"><strong>Admission Status</strong></span></td> 
+      <td  align="center" nowrap="nowrap" bgcolor="#D41128" style="color:#FFFFFF "><span class="style3"><strong>Allot Category</strong></span></td>
+    <!--<td align="center" nowrap="nowrap" bgcolor="#D41128" style="color:#FFFFFF "><span class="style3"><strong>Photo Uploaded</strong></span></td>-->
+</tr>
+
+	  <tr class="tblText" onMouseOver="style.background='#FFC59D'" onMouseOut="style.background='#ffffff'" bgcolor="#ffffff">
+      <td width="7%" align="center">1</td>
+      <td width="14%" align="center">2510130948</td>
+
+	  <td width="10%" align="center">636627</td>
+      <td width="24%" align="left">ADIYA RAJEEV V K</td>
+	  <td width="9%" align="center">Female</td>
+          	  <td width="10%" align="center">Hindi</td>
+            	  <td width="15%" align="center"><font color=#009900><b>MAIN</b></font></td>
+	  
+	  <td width="15%" align="center">General</td>
+                </tr>
+
+	  	  <tr class="tblText" onMouseOver="style.background='#FFC59D'" onMouseOut="style.background='#ffffff'" bgcolor="#ffffff">
+      <td width="7%" align="center">2</td>
+      <td width="14%" align="center">2510143783</td>
+
+	  <td width="10%" align="center">630894</td>
+      <td width="24%" align="left">ALFIYA MARIYAM T V</td>
+	  <td width="9%" align="center">Female</td>
+          	  <td width="10%" align="center">Malayalam</td>
+            	  <td width="15%" align="center"><font color=#009900><b>SUPP_2</b></font></td>
+	  
+	  <td width="15%" align="center">General</td>
+                </tr>
+
+	  	  <tr class="tblText" onMouseOver="style.background='#FFC59D'" onMouseOut="style.background='#ffffff'" bgcolor="#ffffff">
+      <td width="7%" align="center">3</td>
+      <td width="14%" align="center">2510144473</td>
+
+	  <td width="10%" align="center">633482</td>
+      <td width="24%" align="left">AMEYA K</td>
+	  <td width="9%" align="center">Female</td>
+          	  <td width="10%" align="center">Hindi</td>
+            	  <td width="15%" align="center"><font color=#009900><b>MAIN</b></font></td>
+	  
+	  <td width="15%" align="center">General</td>
+                </tr>
+
+	  	  <tr class="tblText" onMouseOver="style.background='#FFC59D'" onMouseOut="style.background='#ffffff'" bgcolor="#ffffff">
+      <td width="7%" align="center">4</td>
+      <td width="14%" align="center">2510113485</td>
+
+	  <td width="10%" align="center">635338</td>
+      <td width="24%" align="left">ANAMIKA V</td>
+	  <td width="9%" align="center">Female</td>
+          	  <td width="10%" align="center">Malayalam</td>
+            	  <td width="15%" align="center"><font color=#009900><b>SUPP_1</b></font></td>
+	  
+	  <td width="15%" align="center">EzhavaThiyyaBillava (ETB)</td>
+                </tr>
+
+	  	  <tr class="tblText" onMouseOver="style.background='#FFC59D'" onMouseOut="style.background='#ffffff'" bgcolor="#ffffff">
+      <td width="7%" align="center">5</td>
+      <td width="14%" align="center">2510127189</td>
+
+	  <td width="10%" align="center">635703</td>
+      <td width="24%" align="left">ANANYA M</td>
+	  <td width="9%" align="center">Female</td>
+          	  <td width="10%" align="center">Hindi</td>
+            	  <td width="15%" align="center"><font color=#009900><b>MAIN</b></font></td>
+	  
+	  <td width="15%" align="center">General</td>
+                </tr>
+
+	  	  <tr class="tblText" onMouseOver="style.background='#FFC59D'" onMouseOut="style.background='#ffffff'" bgcolor="#ffffff">
+      <td width="7%" align="center">6</td>
+      <td width="14%" align="center">2510125075</td>
+
+	  <td width="10%" align="center">632052</td>
+      <td width="24%" align="left">ANEENA RAJEEVAN M V</td>
+	  <td width="9%" align="center">Female</td>
+          	  <td width="10%" align="center">Malayalam</td>
+            	  <td width="15%" align="center"><font color=#009900><b>MAIN</b></font></td>
+	  
+	  <td width="15%" align="center">Dheevara and Related Communities(DV)</td>
+                </tr>
+
+	  	  <tr class="tblText" onMouseOver="style.background='#FFC59D'" onMouseOut="style.background='#ffffff'" bgcolor="#ffffff">
+      <td width="7%" align="center">7</td>
+      <td width="14%" align="center">2510121406</td>
+
+	  <td width="10%" align="center">641797</td>
+      <td width="24%" align="left">ANSHA FATHIMA N</td>
+	  <td width="9%" align="center">Female</td>
+          	  <td width="10%" align="center">Malayalam</td>
+            	  <td width="15%" align="center"><font color=#009900><b>SUPP_2</b></font></td>
+	  
+	  <td width="15%" align="center">General</td>
+                </tr>
+
+	  	  <tr class="tblText" onMouseOver="style.background='#FFC59D'" onMouseOut="style.background='#ffffff'" bgcolor="#ffffff">
+      <td width="7%" align="center">8</td>
+      <td width="14%" align="center">2510127382</td>
+
+	  <td width="10%" align="center">635709</td>
+      <td width="24%" align="left">ARCHANA V</td>
+	  <td width="9%" align="center">Female</td>
+          	  <td width="10%" align="center">Hindi</td>
+            	  <td width="15%" align="center"><font color=#009900><b>MAIN</b></font></td>
+	  
+	  <td width="15%" align="center">General</td>
+                </tr>
+
+	  	  <tr class="tblText" onMouseOver="style.background='#FFC59D'" onMouseOut="style.background='#ffffff'" bgcolor="#ffffff">
+      <td width="7%" align="center">9</td>
+      <td width="14%" align="center">2510700640</td>
+
+	  <td width="10%" align="center">633839</td>
+      <td width="24%" align="left">ASHIKHA M</td>
+	  <td width="9%" align="center">Female</td>
+          	  <td width="10%" align="center">Hindi</td>
+            	  <td width="15%" align="center"><font color=#009900><b>TXFR_1</b></font></td>
+	  
+	  <td width="15%" align="center">General</td>
+                </tr>
+
+	  	  <tr class="tblText" onMouseOver="style.background='#FFC59D'" onMouseOut="style.background='#ffffff'" bgcolor="#ffffff">
+      <td width="7%" align="center">10</td>
+      <td width="14%" align="center">2510101716</td>
+
+	  <td width="10%" align="center">637858</td>
+      <td width="24%" align="left">ASWATHI P</td>
+	  <td width="9%" align="center">Female</td>
+          	  <td width="10%" align="center">Hindi</td>
+            	  <td width="15%" align="center"><font color=#009900><b>MAIN</b></font></td>
+	  
+	  <td width="15%" align="center">EzhavaThiyyaBillava (ETB)</td>
+                </tr>
+
+	  	  <tr class="tblText" onMouseOver="style.background='#FFC59D'" onMouseOut="style.background='#ffffff'" bgcolor="#ffffff">
+      <td width="7%" align="center">11</td>
+      <td width="14%" align="center">2510104231</td>
+
+	  <td width="10%" align="center">634064</td>
+      <td width="24%" align="left">AYISHA DIYA M P</td>
+	  <td width="9%" align="center">Female</td>
+          	  <td width="10%" align="center">Hindi</td>
+            	  <td width="15%" align="center"><font color=#009900><b>TXFR_1</b></font></td>
+	  
+	  <td width="15%" align="center">General</td>
+                </tr>
+
+	  	  <tr class="tblText" onMouseOver="style.background='#FFC59D'" onMouseOut="style.background='#ffffff'" bgcolor="#ffffff">
+      <td width="7%" align="center">12</td>
+      <td width="14%" align="center">2510103645</td>
+
+	  <td width="10%" align="center">630895</td>
+      <td width="24%" align="left">AYISHA GAZVA K M</td>
+	  <td width="9%" align="center">Female</td>
+          	  <td width="10%" align="center">Hindi</td>
+            	  <td width="15%" align="center"><font color=#009900><b>SUPP_1</b></font></td>
+	  
+	  <td width="15%" align="center">General</td>
+                </tr>
+
+	  	  <tr class="tblText" onMouseOver="style.background='#FFC59D'" onMouseOut="style.background='#ffffff'" bgcolor="#ffffff">
+      <td width="7%" align="center">13</td>
+      <td width="14%" align="center">2510102627</td>
+
+	  <td width="10%" align="center">633852</td>
+      <td width="24%" align="left">AYISHA JIYA A P</td>
+	  <td width="9%" align="center">Female</td>
+          	  <td width="10%" align="center">Hindi</td>
+            	  <td width="15%" align="center"><font color=#009900><b>SUPP_1</b></font></td>
+	  
+	  <td width="15%" align="center">General</td>
+                </tr>
+
+	  	  <tr class="tblText" onMouseOver="style.background='#FFC59D'" onMouseOut="style.background='#ffffff'" bgcolor="#ffffff">
+      <td width="7%" align="center">14</td>
+      <td width="14%" align="center">2510102432</td>
+
+	  <td width="10%" align="center">633853</td>
+      <td width="24%" align="left">AYISHA MEHARIN V T</td>
+	  <td width="9%" align="center">Female</td>
+          	  <td width="10%" align="center">Malayalam</td>
+            	  <td width="15%" align="center"><font color=#009900><b>MAIN</b></font></td>
+	  
+	  <td width="15%" align="center">General</td>
+                </tr>
+
+	  	  <tr class="tblText" onMouseOver="style.background='#FFC59D'" onMouseOut="style.background='#ffffff'" bgcolor="#ffffff">
+      <td width="7%" align="center">15</td>
+      <td width="14%" align="center">2510102589</td>
+
+	  <td width="10%" align="center">654034</td>
+      <td width="24%" align="left">AYISHA MISBA K</td>
+	  <td width="9%" align="center">Female</td>
+          	  <td width="10%" align="center">Hindi</td>
+            	  <td width="15%" align="center"><font color=#009900><b>SUPP_1</b></font></td>
+	  
+	  <td width="15%" align="center">General</td>
+                </tr>
+
+	  	  <tr class="tblText" onMouseOver="style.background='#FFC59D'" onMouseOut="style.background='#ffffff'" bgcolor="#ffffff">
+      <td width="7%" align="center">16</td>
+      <td width="14%" align="center">2510103995</td>
+
+	  <td width="10%" align="center">634613</td>
+      <td width="24%" align="left">CUSI</td>
+	  <td width="9%" align="center">Female</td>
+          	  <td width="10%" align="center">Hindi</td>
+            	  <td width="15%" align="center"><font color=#009900><b>TXFR_1</b></font></td>
+	  
+	  <td width="15%" align="center">General</td>
+                </tr>
+
+	  	  <tr class="tblText" onMouseOver="style.background='#FFC59D'" onMouseOut="style.background='#ffffff'" bgcolor="#ffffff">
+      <td width="7%" align="center">17</td>
+      <td width="14%" align="center">2510102542</td>
+
+	  <td width="10%" align="center">624045</td>
+      <td width="24%" align="left">DEVATHEERTHA PP</td>
+	  <td width="9%" align="center">Female</td>
+          	  <td width="10%" align="center">Hindi</td>
+            	  <td width="15%" align="center"><font color=#009900><b>TXFR_1</b></font></td>
+	  
+	  <td width="15%" align="center">General</td>
+                </tr>
+
+	  	  <tr class="tblText" onMouseOver="style.background='#FFC59D'" onMouseOut="style.background='#ffffff'" bgcolor="#ffffff">
+      <td width="7%" align="center">18</td>
+      <td width="14%" align="center">2510133127</td>
+
+	  <td width="10%" align="center">640532</td>
+      <td width="24%" align="left">DIYA K</td>
+	  <td width="9%" align="center">Female</td>
+          	  <td width="10%" align="center">Malayalam</td>
+            	  <td width="15%" align="center"><font color=#009900><b>MAIN</b></font></td>
+	  
+	  <td width="15%" align="center">EzhavaThiyyaBillava (ETB)</td>
+                </tr>
+
+	  	  <tr class="tblText" onMouseOver="style.background='#FFC59D'" onMouseOut="style.background='#ffffff'" bgcolor="#ffffff">
+      <td width="7%" align="center">19</td>
+      <td width="14%" align="center">2510135382</td>
+
+	  <td width="10%" align="center">633290</td>
+      <td width="24%" align="left">DIYA K</td>
+	  <td width="9%" align="center">Female</td>
+          	  <td width="10%" align="center">Hindi</td>
+            	  <td width="15%" align="center"><font color=#009900><b>MAIN</b></font></td>
+	  
+	  <td width="15%" align="center">General</td>
+                </tr>
+
+	  	  <tr class="tblText" onMouseOver="style.background='#FFC59D'" onMouseOut="style.background='#ffffff'" bgcolor="#ffffff">
+      <td width="7%" align="center">20</td>
+      <td width="14%" align="center">2510130645</td>
+
+	  <td width="10%" align="center">633887</td>
+      <td width="24%" align="left">DIYA MEHAJA K</td>
+	  <td width="9%" align="center">Female</td>
+          	  <td width="10%" align="center">Malayalam</td>
+            	  <td width="15%" align="center"><font color=#009900><b>SUPP_1</b></font></td>
+	  
+	  <td width="15%" align="center">General</td>
+                </tr>
+
+	  	  <tr class="tblText" onMouseOver="style.background='#FFC59D'" onMouseOut="style.background='#ffffff'" bgcolor="#ffffff">
+      <td width="7%" align="center">21</td>
+      <td width="14%" align="center">2510134476</td>
+
+	  <td width="10%" align="center">639782</td>
+      <td width="24%" align="left">DIYA P M</td>
+	  <td width="9%" align="center">Female</td>
+          	  <td width="10%" align="center">Hindi</td>
+            	  <td width="15%" align="center"><font color=#009900><b>MAIN</b></font></td>
+	  
+	  <td width="15%" align="center">General</td>
+                </tr>
+
+	  	  <tr class="tblText" onMouseOver="style.background='#FFC59D'" onMouseOut="style.background='#ffffff'" bgcolor="#ffffff">
+      <td width="7%" align="center">22</td>
+      <td width="14%" align="center">2510140136</td>
+
+	  <td width="10%" align="center">633898</td>
+      <td width="24%" align="left">FATHIMA HASNA V P</td>
+	  <td width="9%" align="center">Female</td>
+          	  <td width="10%" align="center">Malayalam</td>
+            	  <td width="15%" align="center"><font color=#009900><b>SUPP_1</b></font></td>
+	  
+	  <td width="15%" align="center">General</td>
+                </tr>
+
+	  	  <tr class="tblText" onMouseOver="style.background='#FFC59D'" onMouseOut="style.background='#ffffff'" bgcolor="#ffffff">
+      <td width="7%" align="center">23</td>
+      <td width="14%" align="center">2510136029</td>
+
+	  <td width="10%" align="center">630722</td>
+      <td width="24%" align="left">FATHIMA HIBA A P</td>
+	  <td width="9%" align="center">Female</td>
+          	  <td width="10%" align="center">Malayalam</td>
+            	  <td width="15%" align="center"><font color=#009900><b>SUPP_1</b></font></td>
+	  
+	  <td width="15%" align="center">Muslim</td>
+                </tr>
+
+	  	  <tr class="tblText" onMouseOver="style.background='#FFC59D'" onMouseOut="style.background='#ffffff'" bgcolor="#ffffff">
+      <td width="7%" align="center">24</td>
+      <td width="14%" align="center">2510128794</td>
+
+	  <td width="10%" align="center">632413</td>
+      <td width="24%" align="left">FATHIMA HILSHA N</td>
+	  <td width="9%" align="center">Female</td>
+          	  <td width="10%" align="center">Malayalam</td>
+            	  <td width="15%" align="center"><font color=#009900><b>TXFR_1</b></font></td>
+	  
+	  <td width="15%" align="center">General</td>
+                </tr>
+
+	  	  <tr class="tblText" onMouseOver="style.background='#FFC59D'" onMouseOut="style.background='#ffffff'" bgcolor="#ffffff">
+      <td width="7%" align="center">25</td>
+      <td width="14%" align="center">2510127027</td>
+
+	  <td width="10%" align="center">635688</td>
+      <td width="24%" align="left">FATHIMA IRSHA P V</td>
+	  <td width="9%" align="center">Female</td>
+          	  <td width="10%" align="center">Malayalam</td>
+            	  <td width="15%" align="center"><font color=#009900><b>TXFR_1</b></font></td>
+	  
+	  <td width="15%" align="center">General</td>
+                </tr>
+
+	  	  <tr class="tblText" onMouseOver="style.background='#FFC59D'" onMouseOut="style.background='#ffffff'" bgcolor="#ffffff">
+      <td width="7%" align="center">26</td>
+      <td width="14%" align="center">2510105518</td>
+
+	  <td width="10%" align="center">633902</td>
+      <td width="24%" align="left">FATHIMA LAMIA P T</td>
+	  <td width="9%" align="center">Female</td>
+          	  <td width="10%" align="center">Malayalam</td>
+            	  <td width="15%" align="center"><font color=#009900><b>MAIN</b></font></td>
+	  
+	  <td width="15%" align="center">General</td>
+                </tr>
+
+	  	  <tr class="tblText" onMouseOver="style.background='#FFC59D'" onMouseOut="style.background='#ffffff'" bgcolor="#ffffff">
+      <td width="7%" align="center">27</td>
+      <td width="14%" align="center">2510105679</td>
+
+	  <td width="10%" align="center">633905</td>
+      <td width="24%" align="left">FATHIMA MANHA K P</td>
+	  <td width="9%" align="center">Female</td>
+          	  <td width="10%" align="center">Malayalam</td>
+            	  <td width="15%" align="center"><font color=#009900><b>MAIN</b></font></td>
+	  
+	  <td width="15%" align="center">General</td>
+                </tr>
+
+	  	  <tr class="tblText" onMouseOver="style.background='#FFC59D'" onMouseOut="style.background='#ffffff'" bgcolor="#ffffff">
+      <td width="7%" align="center">28</td>
+      <td width="14%" align="center">2510135397</td>
+
+	  <td width="10%" align="center">641341</td>
+      <td width="24%" align="left">FATHIMA NEJA K P</td>
+	  <td width="9%" align="center">Female</td>
+          	  <td width="10%" align="center">Hindi</td>
+            	  <td width="15%" align="center"><font color=#009900><b>MAIN</b></font></td>
+	  
+	  <td width="15%" align="center">General</td>
+                </tr>
+
+	  	  <tr class="tblText" onMouseOver="style.background='#FFC59D'" onMouseOut="style.background='#ffffff'" bgcolor="#ffffff">
+      <td width="7%" align="center">29</td>
+      <td width="14%" align="center">2510110872</td>
+
+	  <td width="10%" align="center">628607</td>
+      <td width="24%" align="left">FATHIMA NIYA</td>
+	  <td width="9%" align="center">Female</td>
+          	  <td width="10%" align="center">Hindi</td>
+            	  <td width="15%" align="center"><font color=#009900><b>MAIN</b></font></td>
+	  
+	  <td width="15%" align="center">General</td>
+                </tr>
+
+	  	  <tr class="tblText" onMouseOver="style.background='#FFC59D'" onMouseOut="style.background='#ffffff'" bgcolor="#ffffff">
+      <td width="7%" align="center">30</td>
+      <td width="14%" align="center">2510110346</td>
+
+	  <td width="10%" align="center">630858</td>
+      <td width="24%" align="left">FATHIMA NOORA C P</td>
+	  <td width="9%" align="center">Female</td>
+          	  <td width="10%" align="center">Malayalam</td>
+            	  <td width="15%" align="center"><font color=#009900><b>MAIN</b></font></td>
+	  
+	  <td width="15%" align="center">General</td>
+                </tr>
+
+	  	  <tr class="tblText" onMouseOver="style.background='#FFC59D'" onMouseOut="style.background='#ffffff'" bgcolor="#ffffff">
+      <td width="7%" align="center">31</td>
+      <td width="14%" align="center">2510135407</td>
+
+	  <td width="10%" align="center">630726</td>
+      <td width="24%" align="left">FATHIMA RASHIDA K</td>
+	  <td width="9%" align="center">Female</td>
+          	  <td width="10%" align="center">Malayalam</td>
+            	  <td width="15%" align="center"><font color=#009900><b>SUPP_1</b></font></td>
+	  
+	  <td width="15%" align="center">Muslim</td>
+                </tr>
+
+	  	  <tr class="tblText" onMouseOver="style.background='#FFC59D'" onMouseOut="style.background='#ffffff'" bgcolor="#ffffff">
+      <td width="7%" align="center">32</td>
+      <td width="14%" align="center">2510132284</td>
+
+	  <td width="10%" align="center">633805</td>
+      <td width="24%" align="left">FATHIMA SAFNA T T</td>
+	  <td width="9%" align="center">Female</td>
+          	  <td width="10%" align="center">Malayalam</td>
+            	  <td width="15%" align="center"><font color=#009900><b>SUPP_1</b></font></td>
+	  
+	  <td width="15%" align="center">General</td>
+                </tr>
+
+	  	  <tr class="tblText" onMouseOver="style.background='#FFC59D'" onMouseOut="style.background='#ffffff'" bgcolor="#ffffff">
+      <td width="7%" align="center">33</td>
+      <td width="14%" align="center">2510100629</td>
+
+	  <td width="10%" align="center">631451</td>
+      <td width="24%" align="left">FATHIMA SHAFNA K K</td>
+	  <td width="9%" align="center">Female</td>
+          	  <td width="10%" align="center">Malayalam</td>
+            	  <td width="15%" align="center"><font color=#009900><b>TXFR_1</b></font></td>
+	  
+	  <td width="15%" align="center">General</td>
+                </tr>
+
+	  	  <tr class="tblText" onMouseOver="style.background='#FFC59D'" onMouseOut="style.background='#ffffff'" bgcolor="#ffffff">
+      <td width="7%" align="center">34</td>
+      <td width="14%" align="center">2510125136</td>
+
+	  <td width="10%" align="center">631101</td>
+      <td width="24%" align="left">FATHIMA SHAHALA P T</td>
+	  <td width="9%" align="center">Female</td>
+          	  <td width="10%" align="center">Malayalam</td>
+            	  <td width="15%" align="center"><font color=#009900><b>TXFR_1</b></font></td>
+	  
+	  <td width="15%" align="center">General</td>
+                </tr>
+
+	  	  <tr class="tblText" onMouseOver="style.background='#FFC59D'" onMouseOut="style.background='#ffffff'" bgcolor="#ffffff">
+      <td width="7%" align="center">35</td>
+      <td width="14%" align="center">2510125334</td>
+
+	  <td width="10%" align="center">633924</td>
+      <td width="24%" align="left">FAYIZA FARHATH K</td>
+	  <td width="9%" align="center">Female</td>
+          	  <td width="10%" align="center">Hindi</td>
+            	  <td width="15%" align="center"><font color=#009900><b>TXFR_1</b></font></td>
+	  
+	  <td width="15%" align="center">General</td>
+                </tr>
+
+	  	  <tr class="tblText" onMouseOver="style.background='#FFC59D'" onMouseOut="style.background='#ffffff'" bgcolor="#ffffff">
+      <td width="7%" align="center">36</td>
+      <td width="14%" align="center">2510119679</td>
+
+	  <td width="10%" align="center">14280911</td>
+      <td width="24%" align="left">FEIZA FATHIMA UMMER FAROOK</td>
+	  <td width="9%" align="center">Female</td>
+          	  <td width="10%" align="center">Malayalam</td>
+            	  <td width="15%" align="center"><font color=#009900><b>Vacant Seat ADMN</b></font></td>
+	  
+	  <td width="15%" align="center">General</td>
+                </tr>
+
+	  	  <tr class="tblText" onMouseOver="style.background='#FFC59D'" onMouseOut="style.background='#ffffff'" bgcolor="#ffffff">
+      <td width="7%" align="center">37</td>
+      <td width="14%" align="center">2510103192</td>
+
+	  <td width="10%" align="center">633927</td>
+      <td width="24%" align="left">FIDHA FATHIMA N P</td>
+	  <td width="9%" align="center">Female</td>
+          	  <td width="10%" align="center">Malayalam</td>
+            	  <td width="15%" align="center"><font color=#009900><b>MAIN</b></font></td>
+	  
+	  <td width="15%" align="center">General</td>
+                </tr>
+
+	  	  <tr class="tblText" onMouseOver="style.background='#FFC59D'" onMouseOut="style.background='#ffffff'" bgcolor="#ffffff">
+      <td width="7%" align="center">38</td>
+      <td width="14%" align="center">2510135218</td>
+
+	  <td width="10%" align="center">630862</td>
+      <td width="24%" align="left">FIDHA MARIYAM K P</td>
+	  <td width="9%" align="center">Female</td>
+          	  <td width="10%" align="center">Hindi</td>
+            	  <td width="15%" align="center"><font color=#009900><b>TXFR_1</b></font></td>
+	  
+	  <td width="15%" align="center">General</td>
+                </tr>
+
+	  	  <tr class="tblText" onMouseOver="style.background='#FFC59D'" onMouseOut="style.background='#ffffff'" bgcolor="#ffffff">
+      <td width="7%" align="center">39</td>
+      <td width="14%" align="center">2510136537</td>
+
+	  <td width="10%" align="center">633933</td>
+      <td width="24%" align="left">HAFSA E P</td>
+	  <td width="9%" align="center">Female</td>
+          	  <td width="10%" align="center">Hindi</td>
+            	  <td width="15%" align="center"><font color=#009900><b>MAIN</b></font></td>
+	  
+	  <td width="15%" align="center">General</td>
+                </tr>
+
+	  	  <tr class="tblText" onMouseOver="style.background='#FFC59D'" onMouseOut="style.background='#ffffff'" bgcolor="#ffffff">
+      <td width="7%" align="center">40</td>
+      <td width="14%" align="center">2510131057</td>
+
+	  <td width="10%" align="center">631768</td>
+      <td width="24%" align="left">HALEEMA HAINA E K</td>
+	  <td width="9%" align="center">Female</td>
+          	  <td width="10%" align="center">Hindi</td>
+            	  <td width="15%" align="center"><font color=#009900><b>SUPP_1</b></font></td>
+	  
+	  <td width="15%" align="center">General</td>
+                </tr>
+
+	  	  <tr class="tblText" onMouseOver="style.background='#FFC59D'" onMouseOut="style.background='#ffffff'" bgcolor="#ffffff">
+      <td width="7%" align="center">41</td>
+      <td width="14%" align="center">2510147768</td>
+
+	  <td width="10%" align="center">632902</td>
+      <td width="24%" align="left">HARITHA M</td>
+	  <td width="9%" align="center">Female</td>
+          	  <td width="10%" align="center">Hindi</td>
+            	  <td width="15%" align="center"><font color=#009900><b>MAIN</b></font></td>
+	  
+	  <td width="15%" align="center">Hin.OBC</td>
+                </tr>
+
+	  	  <tr class="tblText" onMouseOver="style.background='#FFC59D'" onMouseOut="style.background='#ffffff'" bgcolor="#ffffff">
+      <td width="7%" align="center">42</td>
+      <td width="14%" align="center">2510116777</td>
+
+	  <td width="10%" align="center">633618</td>
+      <td width="24%" align="left">KEERTHANA K R</td>
+	  <td width="9%" align="center">Female</td>
+          	  <td width="10%" align="center">Hindi</td>
+            	  <td width="15%" align="center"><font color=#009900><b>MAIN</b></font></td>
+	  
+	  <td width="15%" align="center">Hin.OBC</td>
+                </tr>
+
+	  	  <tr class="tblText" onMouseOver="style.background='#FFC59D'" onMouseOut="style.background='#ffffff'" bgcolor="#ffffff">
+      <td width="7%" align="center">43</td>
+      <td width="14%" align="center">2510105573</td>
+
+	  <td width="10%" align="center">632512</td>
+      <td width="24%" align="left">MALAVIKA P K</td>
+	  <td width="9%" align="center">Female</td>
+          	  <td width="10%" align="center">Hindi</td>
+            	  <td width="15%" align="center"><font color=#009900><b>TXFR_1</b></font></td>
+	  
+	  <td width="15%" align="center">General</td>
+                </tr>
+
+	  	  <tr class="tblText" onMouseOver="style.background='#FFC59D'" onMouseOut="style.background='#ffffff'" bgcolor="#ffffff">
+      <td width="7%" align="center">44</td>
+      <td width="14%" align="center">2510119347</td>
+
+	  <td width="10%" align="center">633980</td>
+      <td width="24%" align="left">MITHRA KV</td>
+	  <td width="9%" align="center">Female</td>
+          	  <td width="10%" align="center">Hindi</td>
+            	  <td width="15%" align="center"><font color=#009900><b>MAIN</b></font></td>
+	  
+	  <td width="15%" align="center">General</td>
+                </tr>
+
+	  	  <tr class="tblText" onMouseOver="style.background='#FFC59D'" onMouseOut="style.background='#ffffff'" bgcolor="#ffffff">
+      <td width="7%" align="center">45</td>
+      <td width="14%" align="center">2510144240</td>
+
+	  <td width="10%" align="center">637979</td>
+      <td width="24%" align="left">NAJIYA SHERIN V K</td>
+	  <td width="9%" align="center">Female</td>
+          	  <td width="10%" align="center">Malayalam</td>
+            	  <td width="15%" align="center"><font color=#009900><b>TXFR_1</b></font></td>
+	  
+	  <td width="15%" align="center">General</td>
+                </tr>
+
+	  	  <tr class="tblText" onMouseOver="style.background='#FFC59D'" onMouseOut="style.background='#ffffff'" bgcolor="#ffffff">
+      <td width="7%" align="center">46</td>
+      <td width="14%" align="center">2510136869</td>
+
+	  <td width="10%" align="center">633995</td>
+      <td width="24%" align="left">NIDA FATHIMA I K</td>
+	  <td width="9%" align="center">Female</td>
+          	  <td width="10%" align="center">Hindi</td>
+            	  <td width="15%" align="center"><font color=#009900><b>MAIN</b></font></td>
+	  
+	  <td width="15%" align="center">General</td>
+                </tr>
+
+	  	  <tr class="tblText" onMouseOver="style.background='#FFC59D'" onMouseOut="style.background='#ffffff'" bgcolor="#ffffff">
+      <td width="7%" align="center">47</td>
+      <td width="14%" align="center">2510110977</td>
+
+	  <td width="10%" align="center">631844</td>
+      <td width="24%" align="left">NIDHA FATHIMA C P</td>
+	  <td width="9%" align="center">Female</td>
+          	  <td width="10%" align="center">Hindi</td>
+            	  <td width="15%" align="center"><font color=#009900><b>MAIN</b></font></td>
+	  
+	  <td width="15%" align="center">Muslim</td>
+                </tr>
+
+	  	  <tr class="tblText" onMouseOver="style.background='#FFC59D'" onMouseOut="style.background='#ffffff'" bgcolor="#ffffff">
+      <td width="7%" align="center">48</td>
+      <td width="14%" align="center">2510122942</td>
+
+	  <td width="10%" align="center">633658</td>
+      <td width="24%" align="left">NIVEDHYA P</td>
+	  <td width="9%" align="center">Female</td>
+          	  <td width="10%" align="center">Malayalam</td>
+            	  <td width="15%" align="center"><font color=#009900><b>MAIN</b></font></td>
+	  
+	  <td width="15%" align="center">General</td>
+                </tr>
+
+	  	  <tr class="tblText" onMouseOver="style.background='#FFC59D'" onMouseOut="style.background='#ffffff'" bgcolor="#ffffff">
+      <td width="7%" align="center">49</td>
+      <td width="14%" align="center">2510126378</td>
+
+	  <td width="10%" align="center">630880</td>
+      <td width="24%" align="left">NIYA V</td>
+	  <td width="9%" align="center">Female</td>
+          	  <td width="10%" align="center">Malayalam</td>
+            	  <td width="15%" align="center"><font color=#009900><b>MAIN</b></font></td>
+	  
+	  <td width="15%" align="center">LC/SIUC/Anglo Indian(LSA)</td>
+                </tr>
+
+	  	  <tr class="tblText" onMouseOver="style.background='#FFC59D'" onMouseOut="style.background='#ffffff'" bgcolor="#ffffff">
+      <td width="7%" align="center">50</td>
+      <td width="14%" align="center">2510132352</td>
+
+	  <td width="10%" align="center">634003</td>
+      <td width="24%" align="left">NOORIYA FATHIMA A</td>
+	  <td width="9%" align="center">Female</td>
+          	  <td width="10%" align="center">Malayalam</td>
+            	  <td width="15%" align="center"><font color=#009900><b>SUPP_1</b></font></td>
+	  
+	  <td width="15%" align="center">General</td>
+                </tr>
+
+	  	  <tr class="tblText" onMouseOver="style.background='#FFC59D'" onMouseOut="style.background='#ffffff'" bgcolor="#ffffff">
+      <td width="7%" align="center">51</td>
+      <td width="14%" align="center">2510700929</td>
+
+	  <td width="10%" align="center">8581654</td>
+      <td width="24%" align="left">OSHIN E</td>
+	  <td width="9%" align="center">Female</td>
+          	  <td width="10%" align="center">Malayalam</td>
+            	  <td width="15%" align="center"><font color=#009900><b>SPORTS</b></font></td>
+	  
+	  <td width="15%" align="center">Sports</td>
+                </tr>
+
+	  	  <tr class="tblText" onMouseOver="style.background='#FFC59D'" onMouseOut="style.background='#ffffff'" bgcolor="#ffffff">
+      <td width="7%" align="center">52</td>
+      <td width="14%" align="center">2510116611</td>
+
+	  <td width="10%" align="center">641809</td>
+      <td width="24%" align="left">PRATHYA P T</td>
+	  <td width="9%" align="center">Female</td>
+          	  <td width="10%" align="center">Malayalam</td>
+            	  <td width="15%" align="center"><font color=#009900><b>SUPP_1</b></font></td>
+	  
+	  <td width="15%" align="center">EzhavaThiyyaBillava (ETB)</td>
+                </tr>
+
+	  	  <tr class="tblText" onMouseOver="style.background='#FFC59D'" onMouseOut="style.background='#ffffff'" bgcolor="#ffffff">
+      <td width="7%" align="center">53</td>
+      <td width="14%" align="center">2510143517</td>
+
+	  <td width="10%" align="center">636816</td>
+      <td width="24%" align="left">RHAAYA YASHASVI BIBIJULAL</td>
+	  <td width="9%" align="center">Female</td>
+          	  <td width="10%" align="center">Hindi</td>
+            	  <td width="15%" align="center"><font color=#009900><b>MAIN</b></font></td>
+	  
+	  <td width="15%" align="center">EzhavaThiyyaBillava (ETB)</td>
+                </tr>
+
+	  	  <tr class="tblText" onMouseOver="style.background='#FFC59D'" onMouseOut="style.background='#ffffff'" bgcolor="#ffffff">
+      <td width="7%" align="center">54</td>
+      <td width="14%" align="center">2510141831</td>
+
+	  <td width="10%" align="center">641319</td>
+      <td width="24%" align="left">SALEEKHA P K</td>
+	  <td width="9%" align="center">Female</td>
+          	  <td width="10%" align="center">Malayalam</td>
+            	  <td width="15%" align="center"><font color=#009900><b>MAIN</b></font></td>
+	  
+	  <td width="15%" align="center">General</td>
+                </tr>
+
+	  	  <tr class="tblText" onMouseOver="style.background='#FFC59D'" onMouseOut="style.background='#ffffff'" bgcolor="#ffffff">
+      <td width="7%" align="center">55</td>
+      <td width="14%" align="center">2510101453</td>
+
+	  <td width="10%" align="center">635302</td>
+      <td width="24%" align="left">SAYANA C</td>
+	  <td width="9%" align="center">Female</td>
+          	  <td width="10%" align="center">Malayalam</td>
+            	  <td width="15%" align="center"><font color=#009900><b>TXFR_1</b></font></td>
+	  
+	  <td width="15%" align="center">General</td>
+                </tr>
+
+	  	  <tr class="tblText" onMouseOver="style.background='#FFC59D'" onMouseOut="style.background='#ffffff'" bgcolor="#ffffff">
+      <td width="7%" align="center">56</td>
+      <td width="14%" align="center">2510108723</td>
+
+	  <td width="10%" align="center">638906</td>
+      <td width="24%" align="left">SIVANI C</td>
+	  <td width="9%" align="center">Female</td>
+          	  <td width="10%" align="center">Malayalam</td>
+            	  <td width="15%" align="center"><font color=#009900><b>TXFR_1</b></font></td>
+	  
+	  <td width="15%" align="center">General</td>
+                </tr>
+
+	  	  <tr class="tblText" onMouseOver="style.background='#FFC59D'" onMouseOut="style.background='#ffffff'" bgcolor="#ffffff">
+      <td width="7%" align="center">57</td>
+      <td width="14%" align="center">2510128863</td>
+
+	  <td width="10%" align="center">634039</td>
+      <td width="24%" align="left">SREE LAKSHMI M</td>
+	  <td width="9%" align="center">Female</td>
+          	  <td width="10%" align="center">Hindi</td>
+            	  <td width="15%" align="center"><font color=#009900><b>MAIN</b></font></td>
+	  
+	  <td width="15%" align="center">General</td>
+                </tr>
+
+	  	  <tr class="tblText" onMouseOver="style.background='#FFC59D'" onMouseOut="style.background='#ffffff'" bgcolor="#ffffff">
+      <td width="7%" align="center">58</td>
+      <td width="14%" align="center">2510133318</td>
+
+	  <td width="10%" align="center">635752</td>
+      <td width="24%" align="left">SREEPRIYA K</td>
+	  <td width="9%" align="center">Female</td>
+          	  <td width="10%" align="center">Hindi</td>
+            	  <td width="15%" align="center"><font color=#009900><b>MAIN</b></font></td>
+	  
+	  <td width="15%" align="center">Viswakarma and Related Communities(VK)</td>
+                </tr>
+
+	  	  <tr class="tblText" onMouseOver="style.background='#FFC59D'" onMouseOut="style.background='#ffffff'" bgcolor="#ffffff">
+      <td width="7%" align="center">59</td>
+      <td width="14%" align="center">2510138807</td>
+
+	  <td width="10%" align="center">634047</td>
+      <td width="24%" align="left">T DHARSHINI</td>
+	  <td width="9%" align="center">Female</td>
+          	  <td width="10%" align="center">Malayalam</td>
+            	  <td width="15%" align="center"><font color=#009900><b>MAIN</b></font></td>
+	  
+	  <td width="15%" align="center">SC</td>
+                </tr>
+
+	  	  <tr class="tblText" onMouseOver="style.background='#FFC59D'" onMouseOut="style.background='#ffffff'" bgcolor="#ffffff">
+      <td width="7%" align="center">60</td>
+      <td width="14%" align="center">2510129818</td>
+
+	  <td width="10%" align="center">634048</td>
+      <td width="24%" align="left">THAHIRA HAMDA K V</td>
+	  <td width="9%" align="center">Female</td>
+          	  <td width="10%" align="center">Malayalam</td>
+            	  <td width="15%" align="center"><font color=#009900><b>TXFR_1</b></font></td>
+	  
+	  <td width="15%" align="center">General</td>
+                </tr>
+
+	  	  <tr class="tblText" onMouseOver="style.background='#FFC59D'" onMouseOut="style.background='#ffffff'" bgcolor="#ffffff">
+      <td width="7%" align="center">61</td>
+      <td width="14%" align="center">2510129963</td>
+
+	  <td width="10%" align="center">632531</td>
+      <td width="24%" align="left">THRISHA A</td>
+	  <td width="9%" align="center">Female</td>
+          	  <td width="10%" align="center">Malayalam</td>
+            	  <td width="15%" align="center"><font color=#009900><b>TXFR_1</b></font></td>
+	  
+	  <td width="15%" align="center">General</td>
+                </tr>
+
+	  	  <tr class="tblText" onMouseOver="style.background='#FFC59D'" onMouseOut="style.background='#ffffff'" bgcolor="#ffffff">
+      <td width="7%" align="center">62</td>
+      <td width="14%" align="center">2510132197</td>
+
+	  <td width="10%" align="center">632734</td>
+      <td width="24%" align="left">VAIBHAVA K</td>
+	  <td width="9%" align="center">Female</td>
+          	  <td width="10%" align="center">Malayalam</td>
+            	  <td width="15%" align="center"><font color=#009900><b>MAIN</b></font></td>
+	  
+	  <td width="15%" align="center">EzhavaThiyyaBillava (ETB)</td>
+                </tr>
+
+	  	  <tr class="tblText" onMouseOver="style.background='#FFC59D'" onMouseOut="style.background='#ffffff'" bgcolor="#ffffff">
+      <td width="7%" align="center">63</td>
+      <td width="14%" align="center">2510135318</td>
+
+	  <td width="10%" align="center">633766</td>
+      <td width="24%" align="left">ZIYA FATHIMA K T</td>
+	  <td width="9%" align="center">Female</td>
+          	  <td width="10%" align="center">Hindi</td>
+            	  <td width="15%" align="center"><font color=#009900><b>SUPP_1</b></font></td>
+	  
+	  <td width="15%" align="center">General</td>
+                </tr>
+
+	  
+</table>
+
+<!-- <table width="90%"  height="39" border="3" align="center" cellpadding="0" cellspacing="1">
+	<tr>
+		<td>Note: <font color='#009900'><b>PMNT</b></font> - Permanent, <font color='#0A2FC2'><b>TWSO</b></font> - Temporary With Selective Options, <font color='#FF0000'><b>TWAO</b></font> - Temporary With All Options</td>
+	</tr>
+</table>-->
+  
+
+
+
+
+
+
+ <br/>
+
+
+
+
+
+
+
+<br/>
+
+<br/>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<br>
+
+
+
+
+
+
+
+  <br />
+
+
+
+
+
+
+
+
+<br/>
+  
+  
+  <br />
+  <br />
+  
+<table width="90%"  height="39" border="3" align="center" cellpadding="0" cellspacing="1">
+    <tr bgcolor="#000000" height="18">
+ <td colspan="10" align="center"><font color="#FFFFFF"><B>TC ISSUED FROM SCHOOL</B></font>
+ </td>
+ </tr>
+    <tr bgcolor="#5F6D46" height="18">
+      <td  height="14" align="center" nowrap="nowrap" bgcolor="#D41128" style="color:#FFFFFF "><div align="center">
+          <p class="style3"><strong>SL</strong><strong>NO</strong></p>
+      </div></td>
+      <td align="center" nowrap="nowrap" bgcolor="#D41128" style="color:#FFFFFF "><p class="style3"><strong>Application</strong><strong>No</strong></p>
+      </td>
+	      <td align="center" nowrap="nowrap" bgcolor="#D41128" style="color:#FFFFFF "><p class="style3"><strong>Reg. No:</strong></p></td>
+	  <td align="center" nowrap="nowrap" bgcolor="#D41128" style="color:#FFFFFF "><p class="style3"><strong>Name</strong></p></td>
+      <td  align="center" nowrap="nowrap" bgcolor="#D41128" style="color:#FFFFFF "><p><span class="style3"><strong>Admitted Quota</strong></span></p></td>
+
+	  <td align="center" nowrap="nowrap" bgcolor="#D41128" style="color:#FFFFFF "><p><span class="style3"><strong>TC No</strong></span></p></td>
+	  <td align="center" nowrap="nowrap" bgcolor="#D41128" style="color:#FFFFFF "><p><span class="style3"><strong>TC Date</strong></span></p></td>
+	  <td align="center" nowrap="nowrap" bgcolor="#D41128" style="color:#FFFFFF "><p><span class="style3"><strong>Reason</strong></span></p></td>
+	   <!--<td align="center" nowrap="nowrap" bgcolor="#D41128" style="color:#FFFFFF "><p><span class="style3"><strong>Photo Uploaded</strong></span></p></td>--> 
+</tr>
+
+	  <tr class="tblText" onMouseOver="style.background='#FFC59D'" onMouseOut="style.background='#ffffff'" bgcolor="#ffffff">
+      <td width="3%" align="center">1      <td width="6%" align="center">2510110672</td>
+	  	  <td width="7%" align="center">643079</td>
+      <td width="16%" align="left">AYISHA HANNA T</td>
+	  <td width="5%" align="center">MERIT</td>
+
+	    <td width="10%" align="center">HSS/10001/2025-26/FY/2</td>
+	    <td width="5%" align="center">17-06-2025</td>
+	  <td width="10%" align="center">on request</td>
+	        </tr>
+
+	  	  <tr class="tblText" onMouseOver="style.background='#FFC59D'" onMouseOut="style.background='#ffffff'" bgcolor="#ffffff">
+      <td width="3%" align="center">2      <td width="6%" align="center">2510142876</td>
+	  	  <td width="7%" align="center">20107513</td>
+      <td width="16%" align="left">ANSHI ANIL KUMAR C</td>
+	  <td width="5%" align="center">MERIT</td>
+
+	    <td width="10%" align="center">HSS/10001/2025-26/FY/9</td>
+	    <td width="5%" align="center">18-06-2025</td>
+	  <td width="10%" align="center">On request</td>
+	        </tr>
+
+	  	  <tr class="tblText" onMouseOver="style.background='#FFC59D'" onMouseOut="style.background='#ffffff'" bgcolor="#ffffff">
+      <td width="3%" align="center">3      <td width="6%" align="center">2510147726</td>
+	  	  <td width="7%" align="center">631847</td>
+      <td width="16%" align="left">SAFA A</td>
+	  <td width="5%" align="center">MERIT</td>
+
+	    <td width="10%" align="center">HSS/10001/2025-26/FY/12</td>
+	    <td width="5%" align="center">19-06-2025</td>
+	  <td width="10%" align="center">On request</td>
+	        </tr>
+
+	  	  <tr class="tblText" onMouseOver="style.background='#FFC59D'" onMouseOut="style.background='#ffffff'" bgcolor="#ffffff">
+      <td width="3%" align="center">4      <td width="6%" align="center">2510123847</td>
+	  	  <td width="7%" align="center">633891</td>
+      <td width="16%" align="left">FAIHA</td>
+	  <td width="5%" align="center">MERIT</td>
+
+	    <td width="10%" align="center">HSS/10001/2025-26/FY/16</td>
+	    <td width="5%" align="center">20-06-2025</td>
+	  <td width="10%" align="center">on request</td>
+	        </tr>
+
+	  	  <tr class="tblText" onMouseOver="style.background='#FFC59D'" onMouseOut="style.background='#ffffff'" bgcolor="#ffffff">
+      <td width="3%" align="center">5      <td width="6%" align="center">2510134152</td>
+	  	  <td width="7%" align="center">636652</td>
+      <td width="16%" align="left">NIYA DAS T</td>
+	  <td width="5%" align="center">MERIT</td>
+
+	    <td width="10%" align="center">HSS/10001/2025-26/FY/18</td>
+	    <td width="5%" align="center">23-06-2025</td>
+	  <td width="10%" align="center">on request</td>
+	        </tr>
+
+	  	  <tr class="tblText" onMouseOver="style.background='#FFC59D'" onMouseOut="style.background='#ffffff'" bgcolor="#ffffff">
+      <td width="3%" align="center">6      <td width="6%" align="center">2510141168</td>
+	  	  <td width="7%" align="center">633918</td>
+      <td width="16%" align="left">FATHIMA SHIFA P</td>
+	  <td width="5%" align="center">MERIT</td>
+
+	    <td width="10%" align="center">HSS/10001/2025-26/FY/45</td>
+	    <td width="5%" align="center">25-07-2025</td>
+	  <td width="10%" align="center"> School Transfer</td>
+	        </tr>
+
+	  	  <tr class="tblText" onMouseOver="style.background='#FFC59D'" onMouseOut="style.background='#ffffff'" bgcolor="#ffffff">
+      <td width="3%" align="center">7      <td width="6%" align="center">2510122831</td>
+	  	  <td width="7%" align="center">633775</td>
+      <td width="16%" align="left">AYISHA SHIRIN C</td>
+	  <td width="5%" align="center">MERIT</td>
+
+	    <td width="10%" align="center">HSS/10001/2025-26/FY/38</td>
+	    <td width="5%" align="center">25-07-2025</td>
+	  <td width="10%" align="center"> School Transfer</td>
+	        </tr>
+
+	  	  <tr class="tblText" onMouseOver="style.background='#FFC59D'" onMouseOut="style.background='#ffffff'" bgcolor="#ffffff">
+      <td width="3%" align="center">8      <td width="6%" align="center">2510109834</td>
+	  	  <td width="7%" align="center">633679</td>
+      <td width="16%" align="left">P AYISHA MUFEEDA</td>
+	  <td width="5%" align="center">MERIT</td>
+
+	    <td width="10%" align="center">HSS/10001/2025-26/FY/56</td>
+	    <td width="5%" align="center">25-07-2025</td>
+	  <td width="10%" align="center"> School Transfer</td>
+	        </tr>
+
+	  	  <tr class="tblText" onMouseOver="style.background='#FFC59D'" onMouseOut="style.background='#ffffff'" bgcolor="#ffffff">
+      <td width="3%" align="center">9      <td width="6%" align="center">2510136116</td>
+	  	  <td width="7%" align="center">641564</td>
+      <td width="16%" align="left">HAYA MARIYAM.K</td>
+	  <td width="5%" align="center">MERIT</td>
+
+	    <td width="10%" align="center">HSS/10001/2025-26/FY/36</td>
+	    <td width="5%" align="center">25-07-2025</td>
+	  <td width="10%" align="center"> School Transfer</td>
+	        </tr>
+
+	  	  <tr class="tblText" onMouseOver="style.background='#FFC59D'" onMouseOut="style.background='#ffffff'" bgcolor="#ffffff">
+      <td width="3%" align="center">10      <td width="6%" align="center">2510139574</td>
+	  	  <td width="7%" align="center">628482</td>
+      <td width="16%" align="left">AYISHA HAFEEFA K T</td>
+	  <td width="5%" align="center">MERIT</td>
+
+	    <td width="10%" align="center">HSS/10001/2025-26/FY/34</td>
+	    <td width="5%" align="center">25-07-2025</td>
+	  <td width="10%" align="center"> School Transfer</td>
+	        </tr>
+
+	  	  <tr class="tblText" onMouseOver="style.background='#FFC59D'" onMouseOut="style.background='#ffffff'" bgcolor="#ffffff">
+      <td width="3%" align="center">11      <td width="6%" align="center">2510147321</td>
+	  	  <td width="7%" align="center">633938</td>
+      <td width="16%" align="left">HENA BEGUM A</td>
+	  <td width="5%" align="center">MERIT</td>
+
+	    <td width="10%" align="center">HSS/10001/2025-26/FY/50</td>
+	    <td width="5%" align="center">25-07-2025</td>
+	  <td width="10%" align="center"> School Transfer</td>
+	        </tr>
+
+	  	  <tr class="tblText" onMouseOver="style.background='#FFC59D'" onMouseOut="style.background='#ffffff'" bgcolor="#ffffff">
+      <td width="3%" align="center">12      <td width="6%" align="center">2510131403</td>
+	  	  <td width="7%" align="center">632148</td>
+      <td width="16%" align="left">AYISHA RADWA V</td>
+	  <td width="5%" align="center">MERIT</td>
+
+	    <td width="10%" align="center">HSS/10001/2025-26/FY/37</td>
+	    <td width="5%" align="center">25-07-2025</td>
+	  <td width="10%" align="center"> School Transfer</td>
+	        </tr>
+
+	  	  <tr class="tblText" onMouseOver="style.background='#FFC59D'" onMouseOut="style.background='#ffffff'" bgcolor="#ffffff">
+      <td width="3%" align="center">13      <td width="6%" align="center">2510147720</td>
+	  	  <td width="7%" align="center">628587</td>
+      <td width="16%" align="left">FATHIMA ASLAHA C K</td>
+	  <td width="5%" align="center">MERIT</td>
+
+	    <td width="10%" align="center">HSS/10001/2025-26/FY/41</td>
+	    <td width="5%" align="center">25-07-2025</td>
+	  <td width="10%" align="center"> School Transfer</td>
+	        </tr>
+
+	  	  <tr class="tblText" onMouseOver="style.background='#FFC59D'" onMouseOut="style.background='#ffffff'" bgcolor="#ffffff">
+      <td width="3%" align="center">14      <td width="6%" align="center">2510127768</td>
+	  	  <td width="7%" align="center">633987</td>
+      <td width="16%" align="left">NANDANA N</td>
+	  <td width="5%" align="center">MERIT</td>
+
+	    <td width="10%" align="center">HSS/10001/2025-26/FY/27</td>
+	    <td width="5%" align="center">25-07-2025</td>
+	  <td width="10%" align="center"> School Transfer</td>
+	        </tr>
+
+	  	  <tr class="tblText" onMouseOver="style.background='#FFC59D'" onMouseOut="style.background='#ffffff'" bgcolor="#ffffff">
+      <td width="3%" align="center">15      <td width="6%" align="center">2510131857</td>
+	  	  <td width="7%" align="center">642838</td>
+      <td width="16%" align="left">AYISHA HIBA P</td>
+	  <td width="5%" align="center">MERIT</td>
+
+	    <td width="10%" align="center">HSS/10001/2025-26/FY/35</td>
+	    <td width="5%" align="center">25-07-2025</td>
+	  <td width="10%" align="center"> School Transfer</td>
+	        </tr>
+
+	  	  <tr class="tblText" onMouseOver="style.background='#FFC59D'" onMouseOut="style.background='#ffffff'" bgcolor="#ffffff">
+      <td width="3%" align="center">16      <td width="6%" align="center">2510128099</td>
+	  	  <td width="7%" align="center">637337</td>
+      <td width="16%" align="left">RISHIKA N P</td>
+	  <td width="5%" align="center">MERIT</td>
+
+	    <td width="10%" align="center">HSS/10001/2025-26/FY/59</td>
+	    <td width="5%" align="center">25-07-2025</td>
+	  <td width="10%" align="center"> School Transfer</td>
+	        </tr>
+
+	  	  <tr class="tblText" onMouseOver="style.background='#FFC59D'" onMouseOut="style.background='#ffffff'" bgcolor="#ffffff">
+      <td width="3%" align="center">17      <td width="6%" align="center">2510123248</td>
+	  	  <td width="7%" align="center">633490</td>
+      <td width="16%" align="left">ANAMIKA K M</td>
+	  <td width="5%" align="center">MERIT</td>
+
+	    <td width="10%" align="center">HSS/10001/2025-26/FY/32</td>
+	    <td width="5%" align="center">25-07-2025</td>
+	  <td width="10%" align="center"> School Transfer</td>
+	        </tr>
+
+	  	  <tr class="tblText" onMouseOver="style.background='#FFC59D'" onMouseOut="style.background='#ffffff'" bgcolor="#ffffff">
+      <td width="3%" align="center">18      <td width="6%" align="center">2510108448</td>
+	  	  <td width="7%" align="center">635310</td>
+      <td width="16%" align="left">NESHA MARIYAM C</td>
+	  <td width="5%" align="center">MERIT</td>
+
+	    <td width="10%" align="center">HSS/10001/2025-26/FY/55</td>
+	    <td width="5%" align="center">25-07-2025</td>
+	  <td width="10%" align="center"> School Transfer</td>
+	        </tr>
+
+	  	  <tr class="tblText" onMouseOver="style.background='#FFC59D'" onMouseOut="style.background='#ffffff'" bgcolor="#ffffff">
+      <td width="3%" align="center">19      <td width="6%" align="center">2510127316</td>
+	  	  <td width="7%" align="center">638408</td>
+      <td width="16%" align="left">RENA SHEIHA M</td>
+	  <td width="5%" align="center">MERIT</td>
+
+	    <td width="10%" align="center">HSS/10001/2025-26/FY/58</td>
+	    <td width="5%" align="center">25-07-2025</td>
+	  <td width="10%" align="center"> School Transfer</td>
+	        </tr>
+
+	  	  <tr class="tblText" onMouseOver="style.background='#FFC59D'" onMouseOut="style.background='#ffffff'" bgcolor="#ffffff">
+      <td width="3%" align="center">20      <td width="6%" align="center">2510132867</td>
+	  	  <td width="7%" align="center">633487</td>
+      <td width="16%" align="left">AMINA NAJA P</td>
+	  <td width="5%" align="center">MERIT</td>
+
+	    <td width="10%" align="center">HSS/10001/2025-26/FY/57</td>
+	    <td width="5%" align="center">25-07-2025</td>
+	  <td width="10%" align="center"> School Transfer</td>
+	        </tr>
+
+	  	  <tr class="tblText" onMouseOver="style.background='#FFC59D'" onMouseOut="style.background='#ffffff'" bgcolor="#ffffff">
+      <td width="3%" align="center">21      <td width="6%" align="center">2510118169</td>
+	  	  <td width="7%" align="center">620064</td>
+      <td width="16%" align="left">AMRUTHA K S</td>
+	  <td width="5%" align="center">MERIT</td>
+
+	    <td width="10%" align="center">HSS/10001/2025-26/FY/66</td>
+	    <td width="5%" align="center">08-09-2025</td>
+	  <td width="10%" align="center">school change by special order </td>
+	        </tr>
+
+	  	  <tr class="tblText" onMouseOver="style.background='#FFC59D'" onMouseOut="style.background='#ffffff'" bgcolor="#ffffff">
+      <td width="3%" align="center">22      <td width="6%" align="center">2510125925</td>
+	  	  <td width="7%" align="center">631342</td>
+      <td width="16%" align="left">SREEDEVI V</td>
+	  <td width="5%" align="center">MERIT</td>
+
+	    <td width="10%" align="center">HSS/10001/2025-26/FY/69</td>
+	    <td width="5%" align="center">26-09-2025</td>
+	  <td width="10%" align="center">opted other course </td>
+	        </tr>
+
+	      </table>
+
+  <br />
+</form>
+</body>
+</html>
